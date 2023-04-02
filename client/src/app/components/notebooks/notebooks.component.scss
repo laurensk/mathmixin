@@ -1,0 +1,26 @@
+a:focus {
+  background-color: unset;
+}
+
+.selected {
+  background-color: #e0e0e0;
+}
+
+a {
+  mat-icon {
+    margin-right: 10px;
+    vertical-align: middle;
+    color: #333333;
+  }
+}
+
+mat-nav-list {
+  position: relative;
+  height: calc(100% - 2em);
+
+  button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+}
