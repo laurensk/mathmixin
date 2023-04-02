@@ -21,7 +21,7 @@
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
     "@ckeditor/ckeditor5-angular": "^5.2.0",
-    "ckeditor5-custom-build": "file:../ckeditor5",
+    "ckeditor5-custom-build": "file:src/ckeditor5",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
