@@ -15,12 +15,13 @@ import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NotebooksComponent } from './components/notebooks/notebooks.component';
-import { SidenavContainerComponent } from './components/sidenav-container/sidenav-container.component';
-import { PagesComponent } from './components/pages/pages.component';
 import { EditorComponent } from './components/editor/editor.component';
+import { NotebooksComponent } from './components/notebooks/notebooks.component';
+import { PagesComponent } from './components/pages/pages.component';
+import { SidenavContainerComponent } from './components/sidenav-container/sidenav-container.component';
 
 @NgModule({
   declarations: [AppComponent, NotebooksComponent, SidenavContainerComponent, PagesComponent, EditorComponent],
@@ -43,6 +44,7 @@ import { EditorComponent } from './components/editor/editor.component';
     MatTableModule,
     MatExpansionModule,
     MatSelectModule,
+    CKEditorModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
