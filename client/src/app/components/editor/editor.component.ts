@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import MathType from '@wiris/mathtype-ckeditor5/src/plugin';
+import CustomEditor from 'ckeditor5-custom-build';
 
 @Component({
   selector: 'app-editor',
@@ -8,7 +7,6 @@ import MathType from '@wiris/mathtype-ckeditor5/src/plugin';
   styleUrls: ['./editor.component.scss'],
 })
 export class EditorComponent {
-  public editor = ClassicEditor;
-  public config = { plugins: [MathType], toolbar: { items: ['MathType', 'ChemType'] } };
+  public editor = CustomEditor;
   public data = '<p>Hello, world!</p>';
 }
