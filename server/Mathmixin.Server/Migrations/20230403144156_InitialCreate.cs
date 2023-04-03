@@ -23,9 +23,9 @@ namespace Mathmixin.Server.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    CreatedDateUtc = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    ModifiedDateUtc = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    DeletedDateUtc = table.Column<DateTime>(type: "datetime(6)", nullable: true)
+                    CreatedDateUtc = table.Column<DateTime>(type: "datetime(0)", nullable: false),
+                    ModifiedDateUtc = table.Column<DateTime>(type: "datetime(0)", nullable: false),
+                    DeletedDateUtc = table.Column<DateTime>(type: "datetime(0)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -44,9 +44,9 @@ namespace Mathmixin.Server.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     HtmlContent = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    CreatedDateUtc = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    ModifiedDateUtc = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    DeletedDateUtc = table.Column<DateTime>(type: "datetime(6)", nullable: true)
+                    CreatedDateUtc = table.Column<DateTime>(type: "datetime(0)", nullable: false),
+                    ModifiedDateUtc = table.Column<DateTime>(type: "datetime(0)", nullable: false),
+                    DeletedDateUtc = table.Column<DateTime>(type: "datetime(0)", nullable: true)
                 },
                 constraints: table =>
                 {

@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Mathmixin.Server.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230403101845_InitialCreate")]
+    [Migration("20230403144156_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -29,13 +29,13 @@ namespace Mathmixin.Server.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<DateTime>("CreatedDateUtc")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime(0)");
 
                     b.Property<DateTime?>("DeletedDateUtc")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime(0)");
 
                     b.Property<DateTime>("ModifiedDateUtc")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime(0)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -53,16 +53,16 @@ namespace Mathmixin.Server.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<DateTime>("CreatedDateUtc")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime(0)");
 
                     b.Property<DateTime?>("DeletedDateUtc")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime(0)");
 
                     b.Property<string>("HtmlContent")
                         .HasColumnType("longtext");
 
                     b.Property<DateTime>("ModifiedDateUtc")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime(0)");
 
                     b.Property<long>("NotebookId")
                         .HasColumnType("bigint");

@@ -52,6 +52,7 @@ public class Context : DbContext
 
         foreach (var item in ChangeTracker.Entries<BaseEntity>().Where(e => e.State == EntityState.Deleted))
         {
+            item.State = EntityState.Modified;
             item.Property("DeletedDateUtc").CurrentValue = now;
         }
 

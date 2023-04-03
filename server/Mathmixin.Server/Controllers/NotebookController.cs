@@ -45,7 +45,11 @@ public class NotebookController : ControllerBase
         var notebook = await _context.Notebooks.Where(n => n.NotebookId == notebookId).FirstOrDefaultAsync();
         if (notebook == null) return false;
 
+        var pages = await _context.Pages.Where(p => p.NotebookId == notebook.NotebookId).ToListAsync();
+
         _context.Remove(notebook);
+        _context.RemoveRange(pages);
+
         await _context.SaveChangesAsync();
 
         return true;
