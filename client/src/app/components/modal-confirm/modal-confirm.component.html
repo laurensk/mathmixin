@@ -1,1 +1,8 @@
-<p>modal-confirm works!</p>
+<div class="container">
+  <h1>{{ data.title }}</h1>
+  <p>{{ data.subtitle }}</p>
+  <div class="buttons">
+    <button mat-raised-button (click)="dialogRef.close()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="dialogRef.close(true)">Continue</button>
+  </div>
+</div>

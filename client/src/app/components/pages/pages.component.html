@@ -3,6 +3,11 @@
     <a *ngFor="let page of pages" mat-list-item [routerLink]="page.pageId.toString()" routerLinkActive="selected">
       <mat-icon>sticky_note_2</mat-icon>
       {{ page.title }}
+      <mat-icon class="context" [mat-menu-trigger-for]="menu">more_horiz</mat-icon>
+      <mat-menu #menu>
+        <button mat-menu-item (click)="rename(page)">Rename</button>
+        <button mat-menu-item (click)="delete(page)">Delete</button>
+      </mat-menu>
     </a>
     <button mat-fab color="primary" (click)="create()">
       <mat-icon>add</mat-icon>

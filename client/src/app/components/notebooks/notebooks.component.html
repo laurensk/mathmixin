@@ -8,6 +8,11 @@
     >
       <mat-icon>book</mat-icon>
       {{ notebook.name }}
+      <mat-icon class="context" [mat-menu-trigger-for]="menu">more_horiz</mat-icon>
+      <mat-menu #menu>
+        <button mat-menu-item (click)="rename(notebook)">Rename</button>
+        <button mat-menu-item (click)="delete(notebook)">Delete</button>
+      </mat-menu>
     </a>
     <button mat-fab color="primary" (click)="create()">
       <mat-icon>add</mat-icon>

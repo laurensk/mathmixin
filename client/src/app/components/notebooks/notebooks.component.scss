@@ -7,10 +7,23 @@ a:focus {
 }
 
 a {
+  position: relative;
   mat-icon {
     margin-right: 10px;
     vertical-align: middle;
     color: #333333;
+  }
+
+  .context {
+    display: none;
+  }
+}
+
+a:hover {
+  .context {
+    display: inline;
+    position: absolute;
+    right: 0;
   }
 }
 
