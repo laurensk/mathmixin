@@ -86,7 +86,7 @@ Editor.defaultConfig = {
 			'ChemType'
 		]
 	},
-	language: 'de',
+	language: 'en',
 	image: {
 		toolbar: [
 			'imageTextAlternative',
