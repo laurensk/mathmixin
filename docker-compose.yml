@@ -1,0 +1,33 @@
+version: "3.9"
+services:
+  database:
+    image: mariadb
+    environment:
+      - MYSQL_ROOT_PASSWORD=mathmixin
+      - MYSQL_DATABASE=mathmixin
+      - MYSQL_USER=mathmixin
+      - MYSQL_PASSWORD=mathmixin
+    volumes:
+      - data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysql mathmixin -umathmixin -pmathmixin -e 'SELECT 1;'  || exit 1"]
+      interval: 2s
+      retries: 120
+
+  server:
+    build: ./server/Mathmixin.Server
+    environment:
+      - DB_CONNECTION_STRING=server=database;port=3306;database=mathmixin;user=mathmixin;password=mathmixin
+    depends_on:
+      database:
+        condition: service_healthy
+
+  client:
+    build: ./client
+    ports:
+      - "8080:80"
+    depends_on:
+      - server
+
+volumes:
+  data:
