@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>{{ data.title }}</h1>
+  <p>{{ data.subtitle }}</p>
+  <mat-form-field appearance="outline">
+    <mat-label>{{ data.label }}</mat-label>
+    <input matInput type="text" [(ngModel)]="value" />
+  </mat-form-field>
+  <div class="buttons">
+    <button mat-raised-button (click)="dialogRef.close()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="dialogRef.close(value)">OK</button>
+  </div>
+</div>

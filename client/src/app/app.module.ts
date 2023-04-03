@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -19,12 +20,22 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EditorComponent } from './components/editor/editor.component';
+import { ModalConfirmComponent } from './components/modal-confirm/modal-confirm.component';
+import { ModalTextInputComponent } from './components/modal-text-input/modal-text-input.component';
 import { NotebooksComponent } from './components/notebooks/notebooks.component';
 import { PagesComponent } from './components/pages/pages.component';
 import { SidenavContainerComponent } from './components/sidenav-container/sidenav-container.component';
 
 @NgModule({
-  declarations: [AppComponent, NotebooksComponent, SidenavContainerComponent, PagesComponent, EditorComponent],
+  declarations: [
+    AppComponent,
+    NotebooksComponent,
+    SidenavContainerComponent,
+    PagesComponent,
+    EditorComponent,
+    ModalConfirmComponent,
+    ModalTextInputComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -45,6 +56,7 @@ import { SidenavContainerComponent } from './components/sidenav-container/sidena
     MatExpansionModule,
     MatSelectModule,
     CKEditorModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

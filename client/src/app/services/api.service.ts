@@ -14,7 +14,7 @@ export class ApiService {
 
       const res = await fetch('/api/' + route, {
         method,
-        body: body,
+        body: isBodyPrimitive ? body : JSON.stringify(body),
         headers: { 'Content-Type': isBodyPrimitive ? 'text/plain' : 'application/json' },
       });
 

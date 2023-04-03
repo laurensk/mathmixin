@@ -1,0 +1,16 @@
+.container {
+  width: 30em;
+  padding: 2em;
+
+  .buttons {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  mat-form-field {
+    margin-top: 1em;
+    width: 100%;
+  }
+}
