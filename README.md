@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/badge/status-proof%20of%20concept-blue" />
   <img src="https://img.shields.io/badge/angular-15-D70230" />
   <img src="https://img.shields.io/badge/.net%20core-7-512BD4" />
-  <a href="https://github.com/laurensk/mathmixin/blob/master/LICENSE" target="_blank">
+  <a href="https://github.com/laurensk/mathmixin/blob/main/LICENSE" target="_blank">
     <img src="https://img.shields.io/github/license/laurensk/mathmixin" />
   </a>
 </p>
@@ -23,4 +23,4 @@ Give a ⭐️ if you like Mathmixin!
 
 ## 📝 License
 
-This project is [GNU GPLv3](https://github.com/laurensk/mathmixin/blob/master/LICENSE) licensed.
+This project is [GNU GPLv3](https://github.com/laurensk/mathmixin/blob/main/LICENSE) licensed.
