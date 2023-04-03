@@ -51,6 +51,29 @@ export class EditorComponent {
   }
 
   async download() {
-    alert('download');
+    const element = document.getElementsByClassName('ck-content').item(0);
+    const printWindow = window.open('', '', 'popup');
+
+    printWindow.document.write(
+      `
+    <html>
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+      </head>
+      <style>
+        * {
+          font-family: "Roboto";
+        }
+      </style>
+      <body>
+        ${element.innerHTML}
+      </body>
+    </html>
+    `
+    );
+
+    printWindow.document.close();
+    printWindow.print();
+    printWindow.close();
   }
 }
