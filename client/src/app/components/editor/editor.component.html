@@ -1,5 +1,5 @@
 <div class="container">
-  <ckeditor [editor]="editor" [(ngModel)]="pageContent"></ckeditor>
+  <ckeditor [editor]="editor" [(ngModel)]="pageContent" (ngModelChange)="contentUpdated()"></ckeditor>
   <div class="buttons">
     <!-- <p><small>Last saved: now</small></p> -->
     <mat-icon (click)="save()">save</mat-icon>

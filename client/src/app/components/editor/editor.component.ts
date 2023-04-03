@@ -43,10 +43,14 @@ export class EditorComponent {
     this.pageContent = content.content ?? '';
   }
 
-  async save() {
+  async contentUpdated() {
+    this.save(true);
+  }
+
+  async save(auto = false) {
     const success = await this._apiService.saveContent(this.pageId, { content: this.pageContent });
-    if (success) {
-      this._snackBar.open('Saved successfully!', undefined, { duration: 150 });
+    if (success && !auto) {
+      this._snackBar.open('Saved successfully!', undefined, { duration: 500 });
     }
   }
 
