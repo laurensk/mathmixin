@@ -1,5 +1,6 @@
 using Mathmixin.Server.Database;
 using Mathmixin.Server.Entities;
+using Mathmixin.Server.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -47,19 +48,19 @@ public class PageController : ControllerBase
     }
 
     [HttpGet("{pageId:long}/content")]
-    public async Task<string> GetContent(long pageId)
+    public async Task<ContentModel> GetContent(long pageId)
     {
         var page = await _context.Pages.Where(p => p.PageId == pageId).FirstOrDefaultAsync();
-        return page?.HtmlContent;
+        return new ContentModel(page?.HtmlContent);
     }
 
     [HttpPost("{pageId:long}/content")]
-    public async Task<bool> SaveContent(long pageId, [FromBody] string htmlContent)
+    public async Task<bool> SaveContent(long pageId, [FromBody] ContentModel content)
     {
         var page = await _context.Pages.Where(p => p.PageId == pageId).FirstOrDefaultAsync();
         if (page == null) return false;
 
-        page.HtmlContent = htmlContent;
+        page.HtmlContent = content.Content;
 
         await _context.SaveChangesAsync();
         return true;
