@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace Mathmixin.Server.Entities.Base;
 
 public abstract class BaseEntity
@@ -6,5 +8,5 @@ public abstract class BaseEntity
 
     public DateTime ModifiedDateUtc { get; set; }
 
-    public DateTime? DeletedDateUtc { get; set; }
+    [JsonIgnore] public DateTime? DeletedDateUtc { get; set; }
 }
