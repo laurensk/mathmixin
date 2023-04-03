@@ -1,18 +1,14 @@
 <app-sidenav-container>
   <mat-nav-list>
-    <a mat-list-item routerLink="1" routerLinkActive="selected">
+    <a
+      *ngFor="let notebook of notebooks"
+      mat-list-item
+      [routerLink]="notebook.notebookId.toString()"
+      routerLinkActive="selected"
+    >
       <mat-icon>book</mat-icon>
-      Hausübung
+      {{ notebook.name }}
     </a>
-    <a mat-list-item routerLink="2" routerLinkActive="selected">
-      <mat-icon>book</mat-icon>
-      Schulübung
-    </a>
-    <a mat-list-item routerLink="3" routerLinkActive="selected">
-      <mat-icon>book</mat-icon>
-      Üben für Tests
-    </a>
-
     <button mat-fab color="primary">
       <mat-icon>add</mat-icon>
     </button>
