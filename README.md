@@ -1,5 +1,5 @@
 <h1 align="center">Welcome to Mathmixin 👋</h1>
-<p>
+<p align="center">
   <img src="https://img.shields.io/badge/version-0.0.1-blue" />
   <img src="https://img.shields.io/badge/status-proof%20of%20concept-blue" />
   <img src="https://img.shields.io/badge/angular-15-D70230" />
@@ -9,7 +9,7 @@
   </a>
 </p>
 
-**Your self open-source and self hosted notebook focused on applied mathematics.**
+<p align="center"><b>Your self open-source and self hosted notebook focused on applied mathematics.</b></p>
 
 ![Mathmixin](https://github.com/laurensk/mathmixin/blob/main/assets/demo-01.png?raw=true)
 
