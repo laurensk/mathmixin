@@ -1,7 +1,7 @@
 <div class="container">
-  <ckeditor [editor]="editor" [data]="data"></ckeditor>
+  <ckeditor [editor]="editor" [(ngModel)]="pageContent"></ckeditor>
   <div class="buttons">
-    <p><small>Last saved: now</small></p>
+    <!-- <p><small>Last saved: now</small></p> -->
     <mat-icon (click)="save()">save</mat-icon>
     <mat-icon (click)="download()">download</mat-icon>
   </div>

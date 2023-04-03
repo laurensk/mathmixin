@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ContentModel } from '../models/content-model.model';
 import { Notebook } from '../models/notebook.model';
 import { Page } from '../models/page.model';
 
@@ -58,10 +59,10 @@ export class ApiService {
   }
 
   async getContent(pageId: number) {
-    return this.request<string>('GET', 'pages/' + pageId + '/content');
+    return this.request<ContentModel>('GET', 'pages/' + pageId + '/content');
   }
 
-  async saveContent(pageId: number, content: string) {
-    return this.request<string>('POST', 'pages/' + pageId + '/content', content);
+  async saveContent(pageId: number, content: ContentModel) {
+    return this.request<boolean>('POST', 'pages/' + pageId + '/content', content);
   }
 }
