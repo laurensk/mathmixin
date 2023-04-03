@@ -11,7 +11,7 @@
 
 **Your self open-source and self hosted notebook focused on applied mathematics.**
 
-![Mathmixin](https://github.com/laurensk/mathmixin/blob/master/assets/demo-01.png)
+![Mathmixin](https://github.com/laurensk/mathmixin/blob/main/assets/demo-01.png?raw=true)
 
 > **Keep in mind**: At this point, Mathmixin is a proof of concept and its API does not use authentication at all. Please only install locally!
 
