@@ -9,7 +9,7 @@
   </a>
 </p>
 
-<p align="center"><b>Your self open-source and self hosted notebook focused on applied mathematics.</b></p>
+<p align="center"><b>Your open-source and self hosted notebook focused on applied mathematics.</b></p>
 
 ![Mathmixin](https://github.com/laurensk/mathmixin/blob/main/assets/demo-01.png?raw=true)
 
