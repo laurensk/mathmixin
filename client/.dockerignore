@@ -1,7 +1,10 @@
 .git
 .editorconfig
 /.vscode/*
-/node_modules
+**/node_modules
+**/build
+**/dist
+/.angular
 /e2e
 /docs
 .gitignore

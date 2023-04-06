@@ -2,29 +2,15 @@
 
 FROM node:18-alpine AS base
 
-# Dependencies
-
-FROM base AS deps
-
-WORKDIR /app
-
-COPY package.json package-lock.json ./
-RUN npm i
-
 # Build
 
 FROM base AS build
 
 WORKDIR /app
 
-COPY --from=deps /app/node_modules ./node_modules
-
-# ckeditor5 deps
-COPY --from=deps /app/src/ckeditor5/node_modules ./src/ckeditor5/node_modules
-COPY --from=deps /app/src/ckeditor5/build ./src/ckeditor5/build
-
 COPY . .
 
+RUN npm i
 RUN npm run build
 
 # Nginx
